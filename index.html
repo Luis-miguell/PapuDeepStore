@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendita</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="shortcut icon" href="Recursos/main-logo.png" type="image/x-icon">
+</head> 
+<body>
+    <header class="header">
+        <div class="logos">
+            <a href="index.html"><div class="img-logo" alt="Logo principal de la marca."></div></a>
+            <h1 class="main-title">Papu Tienda Online</h1>
+        </div>
+        <div class="navbar-login">
+            <nav class="navbar">
+                <ul class="nav-list">   
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn-admin-acces" id="btn-admin-acces">DKey</button>
+            <div class="botones-login">
+                <button class="btn-login">Log In</button>
+                <div class="line"></div>
+                <button class="btn-login">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="flotante">
+            <button class="add-product-btn" id="add-product-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                </svg>
+            </button>
+        </div>
+        <section class="filtros">
+            <div class="filtro-categoria">
+                <h2>Categorias</h2>
+                <select name="categorias" id="categories-select" >
+                    <option value="todas">Todas</option>
+                    <option value="moda">Moda</option>
+                    <option value="lujos">Lujos</option>
+                    <option value="deporte">Deportes</option>
+                    <option value="tecnologia">Tecnología</option>
+                </select>
+            </div>
+            <div class="filtro-precios">
+                <h2>Precios</h2>
+                <form id="prices-form">
+                    <input type="number" id="min-price" placeholder="Precio mínimo" value="0">
+                    <div class="line"></div>
+                    <input type="number" id="max-price" placeholder="Precio máximo">
+                </form> 
+                <button form="prices-form">Filtrar</button>
+            </div>
+        </section>
+        <section class="products-section" id="products-section">         
+        </section>
+    </main>
+    <div class="product-form-modal" id="product-form-modal">
+        <form id="product-form" class="product-form">
+            <h2>Agrega un producto</h2>
+            <label class="product-form-label" for="product-name-input">Nombre: 
+                <input type="text" name="nombre-producto" class="product-form-input" id="product-name-input" required placeholder="Terrenator">
+            </label>
+            <label class="product-form-label" for="product-price-input">Precio: 
+                <input type="number" name="precio-producto" class="product-form-input" id="product-price-input" min="0" required placeholder="150000">
+            </label>
+            <label class="product-form-label" for="product-image-input">Imagen: 
+                <input type="url" name="imagen-producto" class="product-form-input" id="product-image-input" required placeholder="URL">
+            </label>
+            <label class="product-form-label" for="product-category-input">Categoria: 
+                <input type="text" name="categoria-producto" class="product-form-input" id="product-category-input" required placeholder="Juegos">
+            </label>
+            <div class="product-form-buttons">
+                <button class="product-form-button" id="product-form-close-button" type="button" >Cancelar</button>
+                <button class="product-form-button">Agregar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
