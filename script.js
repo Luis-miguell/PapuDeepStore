@@ -128,7 +128,7 @@ let shuffle = localStorage.getItem("shuffle");
 shuffle = shuffle == null ? true : JSON.parse(shuffle);
 
 //Referencia entre filtros
-let referenciaFiltros;
+let referenciaFiltros = productos;
 
 
 //Variable de productos barajeados
